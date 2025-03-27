@@ -1,0 +1,57 @@
+-- alu.vhd
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity alu is
+    Port ( 
+        input1 : in STD_LOGIC_VECTOR(31 downto 0);
+        input2 : in STD_LOGIC_VECTOR(31 downto 0);
+        ALUControl : in STD_LOGIC_VECTOR(3 downto 0);
+        shamt : in STD_LOGIC_VECTOR(4 downto 0);
+        zero : out STD_LOGIC;
+        ALUResult : out STD_LOGIC_VECTOR(31 downto 0)
+    );
+end alu;
+
+architecture Behavioral of alu is
+begin
+    process(input1, input2, ALUControl, shamt)
+        variable temp_result : std_logic_vector(31 downto 0);
+    begin
+        case ALUControl is
+            when "0000" => -- AND
+                temp_result := input1 and input2;
+            when "0001" => -- OR
+                temp_result := input1 or input2;
+            when "0010" => -- ADD
+                temp_result := std_logic_vector(unsigned(input1) + unsigned(input2));
+            when "0110" => -- SUB
+                temp_result := std_logic_vector(unsigned(input1) - unsigned(input2));
+            when "0111" => -- SLT
+                if signed(input1) < signed(input2) then
+                    temp_result := x"00000001";
+                else
+                    temp_result := x"00000000";
+                end if;
+            when "1000" => -- SLL
+                temp_result := std_logic_vector(shift_left(unsigned(input2), 
+                                              to_integer(unsigned(shamt))));
+            when "1001" => -- SRL
+                temp_result := std_logic_vector(shift_right(unsigned(input2), 
+                                              to_integer(unsigned(shamt))));
+            when "1010" => -- SRA
+                temp_result := std_logic_vector(shift_right(signed(input2), 
+                                              to_integer(unsigned(shamt))));
+            when others =>
+                temp_result := (others => '0');
+        end case;
+        
+        ALUResult <= temp_result;
+        if temp_result = x"00000000" then
+            zero <= '1';
+        else
+            zero <= '0';
+        end if;
+    end process;
+end Behavioral;

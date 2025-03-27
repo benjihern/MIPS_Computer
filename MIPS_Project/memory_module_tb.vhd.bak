@@ -1,0 +1,145 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity memory_module_tb is
+end memory_module_tb;
+
+architecture Behavioral of memory_module_tb is
+   -- Component Declaration
+   component memory_module
+       Port ( 
+           clk : in STD_LOGIC;
+           baddr : in STD_LOGIC_VECTOR(31 downto 0);
+           dataIn : in STD_LOGIC_VECTOR(31 downto 0);
+           memRead : in STD_LOGIC;
+           memWrite : in STD_LOGIC;
+           dataOut : out STD_LOGIC_VECTOR(31 downto 0);
+           switches : in STD_LOGIC_VECTOR(9 downto 0);
+           input_enable : in STD_LOGIC;
+           display_out : out STD_LOGIC_VECTOR(31 downto 0)
+       );
+   end component;
+   
+   -- Test Signals
+   signal clk : STD_LOGIC := '0';
+   signal baddr : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+   signal dataIn : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+   signal memRead : STD_LOGIC := '0';
+   signal memWrite : STD_LOGIC := '0';
+   signal dataOut : STD_LOGIC_VECTOR(31 downto 0);
+   signal switches : STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
+   signal input_enable : STD_LOGIC := '0';
+   signal display_out : STD_LOGIC_VECTOR(31 downto 0);
+   
+   -- Clock period definitions
+   constant clk_period : time := 10 ns;
+
+begin
+   -- Instantiate the Unit Under Test (UUT)
+   UUT: memory_module port map (
+       clk => clk,
+       baddr => baddr,
+       dataIn => dataIn,
+       memRead => memRead,
+       memWrite => memWrite,
+       dataOut => dataOut,
+       switches => switches,
+       input_enable => input_enable,
+       display_out => display_out
+   );
+
+   -- Clock process
+   clk_process: process
+   begin
+       clk <= '0';
+       wait for clk_period/2;
+       clk <= '1';
+       wait for clk_period/2;
+   end process;
+   
+   -- Stimulus process
+   stim_proc: process
+   begin
+       -- Initialize
+       wait for 100 ns;
+       
+       -- Write 0x0A0A0A0A to byte address 0x00000000
+       baddr <= x"00000000";
+       dataIn <= x"0A0A0A0A";
+       memWrite <= '1';
+       wait for clk_period;
+       memWrite <= '0';
+       wait for clk_period;
+
+       -- Write 0xF0F0F0F0 to byte address 0x00000004
+       baddr <= x"00000004";
+       dataIn <= x"F0F0F0F0";
+       memWrite <= '1';
+       wait for clk_period;
+       memWrite <= '0';
+       wait for clk_period;
+
+       -- Read from byte address 0x00000000
+       baddr <= x"00000000";
+       memRead <= '1';
+       wait for clk_period;  -- Should show 0x0A0A0A0A
+       wait for clk_period;
+
+       -- Read from byte address 0x00000001
+       baddr <= x"00000001";
+       wait for clk_period;  -- Should show 0x0A0A0A0A
+       wait for clk_period;
+
+       -- Read from byte address 0x00000004
+       baddr <= x"00000004";
+       wait for clk_period;  -- Should show 0xF0F0F0F0
+       wait for clk_period;
+
+       -- Read from byte address 0x00000005
+       baddr <= x"00000005";
+       wait for clk_period;  -- Should show 0xF0F0F0F0
+       wait for clk_period;
+       memRead <= '0';
+       wait for clk_period;
+
+       -- Write 0x00001111 to outport
+       baddr <= x"F0000FFFC";
+       dataIn <= x"00001111";
+       memWrite <= '1';
+       wait for clk_period;
+       memWrite <= '0';
+       wait for clk_period;
+
+       -- Load 0x00010000 into inport0
+       switches <= "0000000000";  -- Port select = 0 for INPORT0
+       -- Since we can only use 9 bits, we'll need multiple writes
+       -- First write
+       switches <= "0000000000";  -- Lower 9 bits
+       input_enable <= '1';
+       wait for clk_period;
+       input_enable <= '0';
+       wait for clk_period;
+
+       -- Load 0x00000001 into inport1
+       switches <= "1000000001";  -- Port select = 1 for INPORT1, data = 1
+       input_enable <= '1';
+       wait for clk_period;
+       input_enable <= '0';
+       wait for clk_period;
+
+       -- Read from inport0
+       baddr <= x"F0000FFF8";
+       memRead <= '1';
+       wait for clk_period;  -- Should show 0x00010000
+       wait for clk_period;
+
+       -- Read from inport1
+       baddr <= x"F0000FFFC";
+       wait for clk_period;  -- Should show 0x00000001
+       wait for clk_period;
+       memRead <= '0';
+
+       wait;
+   end process;
+end Behavioral;

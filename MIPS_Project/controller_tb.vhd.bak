@@ -1,0 +1,87 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity controller_tb is
+end controller_tb;
+
+architecture Behavioral of controller_tb is
+    component controller is
+        Port ( 
+            clk : in STD_LOGIC;
+            reset : in STD_LOGIC;
+            opcode : in STD_LOGIC_VECTOR(5 downto 0);
+            funct : in STD_LOGIC_VECTOR(5 downto 0);
+            MemRead : out STD_LOGIC;
+            MemWrite : out STD_LOGIC;
+            MemtoReg : out STD_LOGIC;
+            IorD : out STD_LOGIC;
+            IRWrite : out STD_LOGIC;
+            PCWrite : out STD_LOGIC;
+            PCWriteCond : out STD_LOGIC;
+            PCSource : out STD_LOGIC_VECTOR(1 downto 0);
+            ALUOp : out STD_LOGIC_VECTOR(1 downto 0);
+            ALUSrcA : out STD_LOGIC;
+            ALUSrcB : out STD_LOGIC_VECTOR(1 downto 0);
+            RegWrite : out STD_LOGIC;
+            RegDst : out STD_LOGIC;
+            JumpAndLink : out STD_LOGIC;
+            IsSigned : out STD_LOGIC
+        );
+    end component;
+
+    signal clk : STD_LOGIC;
+    signal reset : STD_LOGIC;
+    signal opcode : STD_LOGIC_VECTOR(5 downto 0);
+    signal funct : STD_LOGIC_VECTOR(5 downto 0);
+    
+    signal MemRead, MemWrite, MemtoReg, IorD, IRWrite : STD_LOGIC;
+    signal PCWrite, PCWriteCond, ALUSrcA, RegWrite, RegDst : STD_LOGIC;
+    signal JumpAndLink, IsSigned : STD_LOGIC;
+    signal PCSource, ALUOp : STD_LOGIC_VECTOR(1 downto 0);
+    signal ALUSrcB : STD_LOGIC_VECTOR(1 downto 0);
+
+begin
+    -- Controller instance
+    uut: controller port map (
+        clk => clk,
+        reset => reset,
+        opcode => opcode,
+        funct => funct,
+        MemRead => MemRead,
+        MemWrite => MemWrite,
+        MemtoReg => MemtoReg,
+        IorD => IorD,
+        IRWrite => IRWrite,
+        PCWrite => PCWrite,
+        PCWriteCond => PCWriteCond,
+        PCSource => PCSource,
+        ALUOp => ALUOp,
+        ALUSrcA => ALUSrcA,
+        ALUSrcB => ALUSrcB,
+        RegWrite => RegWrite,
+        RegDst => RegDst,
+        JumpAndLink => JumpAndLink,
+        IsSigned => IsSigned
+    );
+
+    -- Clock generation 
+    process
+    begin
+        clk <= '0';
+        wait for 50 ms;
+        clk <= '1';
+        wait for 50 ms;
+    end process;
+
+    -- Test stimulus
+    process
+    begin
+        reset <= '1';
+        wait for 100 ms;
+        reset <= '0';
+        
+        wait;
+    end process;
+
+end Behavioral;

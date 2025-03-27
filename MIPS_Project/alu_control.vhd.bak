@@ -1,0 +1,67 @@
+-- alu_control.vhd
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity alu_control is
+    Port ( 
+        -- Function field from instruction
+        funct : in STD_LOGIC_VECTOR(5 downto 0);
+        -- Simplified ALU control signal
+        alu_control_out : out STD_LOGIC_VECTOR(4 downto 0)  -- 5 bits to handle all R-type operations
+    );
+end alu_control;
+
+architecture Behavioral of alu_control is
+begin
+    process(funct)
+    begin
+        case funct is
+            when "100001" => -- add unsigned (0x21)
+                alu_control_out <= "00000";
+                
+            when "100011" => -- sub unsigned (0x23)
+                alu_control_out <= "00001";
+                
+            when "011000" => -- mult (0x18)
+                alu_control_out <= "00010";
+                
+            when "011001" => -- mult unsigned (0x19)
+                alu_control_out <= "00011";
+                
+            when "100100" => -- and (0x24)
+                alu_control_out <= "00100";
+                
+            when "100101" => -- or (0x25)
+                alu_control_out <= "00101";
+                
+            when "100110" => -- xor (0x26)
+                alu_control_out <= "00110";
+                
+            when "000010" => -- srl (0x02)
+                alu_control_out <= "00111";
+                
+            when "000000" => -- sll (0x00)
+                alu_control_out <= "01000";
+                
+            when "000011" => -- sra (0x03)
+                alu_control_out <= "01001";
+                
+            when "101010" => -- slt (0x2A)
+                alu_control_out <= "01010";
+                
+            when "101011" => -- sltu (0x2B)
+                alu_control_out <= "01011";
+                
+            when "010000" => -- mfhi (0x10)
+                alu_control_out <= "01100";
+                
+            when "010010" => -- mflo (0x12)
+                alu_control_out <= "01101";
+
+            when others =>
+                alu_control_out <= "11111";  -- Invalid operation
+                
+        end case;
+    end process;
+end Behavioral;

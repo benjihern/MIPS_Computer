@@ -1,0 +1,51 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity io_module is
+    Port ( 
+        clk : in STD_LOGIC;
+        -- Physical I/O
+        switches : in STD_LOGIC_VECTOR(9 downto 0);  -- 9 data switches + 1 port select
+        input_enable : in STD_LOGIC;                 -- Button for input ports
+        display_out : out STD_LOGIC_VECTOR(31 downto 0);  -- To 7-segment displays
+        -- Memory interface
+        inport0_out : out STD_LOGIC_VECTOR(31 downto 0);
+        inport1_out : out STD_LOGIC_VECTOR(31 downto 0);
+        outport_in : in STD_LOGIC_VECTOR(31 downto 0)
+    );
+end io_module;
+
+architecture Behavioral of io_module is
+    signal input_enable_prev : std_logic := '0';
+    signal input_enable_edge : std_logic;
+
+begin
+    -- Edge detection for input enable
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            input_enable_prev <= input_enable;
+        end if;
+    end process;
+
+    input_enable_edge <= '1' when input_enable = '1' and input_enable_prev = '0' else '0';
+
+    -- Input port registers
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if input_enable_edge = '1' then
+                if switches(9) = '0' then  -- INPORT0
+                    inport0_out <= (31 downto 9 => '0') & switches(8 downto 0);
+                else                       -- INPORT1
+                    inport1_out <= (31 downto 9 => '0') & switches(8 downto 0);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    -- Output to display
+    display_out <= outport_in;
+
+end Behavioral;

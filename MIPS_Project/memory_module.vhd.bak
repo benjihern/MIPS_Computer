@@ -1,0 +1,123 @@
+-- memory_module.vhd (Combined Top Level)
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity memory_module is
+    Port ( 
+        clk : in STD_LOGIC;
+        -- Memory interface
+        baddr : in STD_LOGIC_VECTOR(31 downto 0);  -- byte address
+        dataIn : in STD_LOGIC_VECTOR(31 downto 0);
+        memRead : in STD_LOGIC;
+        memWrite : in STD_LOGIC;
+        dataOut : out STD_LOGIC_VECTOR(31 downto 0);
+        -- Physical I/O interface
+        switches : in STD_LOGIC_VECTOR(9 downto 0);
+        input_enable : in STD_LOGIC;
+        display_out : out STD_LOGIC_VECTOR(31 downto 0)
+    );
+end memory_module;
+
+architecture Behavioral of memory_module is
+    -- RAM component declaration
+    component RAM
+        PORT (
+            address : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+            clock   : IN STD_LOGIC  := '1';
+            data    : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+            rden    : IN STD_LOGIC  := '1';
+            wren    : IN STD_LOGIC;
+            q       : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+        );
+    end component;
+
+    -- I/O Module component declaration
+    component io_module
+        Port ( 
+            clk : in STD_LOGIC;
+            switches : in STD_LOGIC_VECTOR(9 downto 0);
+            input_enable : in STD_LOGIC;
+            display_out : out STD_LOGIC_VECTOR(31 downto 0);
+            inport0_out : out STD_LOGIC_VECTOR(31 downto 0);
+            inport1_out : out STD_LOGIC_VECTOR(31 downto 0);
+            outport_in : in STD_LOGIC_VECTOR(31 downto 0)
+        );
+    end component;
+
+    -- Internal signals
+    signal ram_addr : STD_LOGIC_VECTOR(7 downto 0);
+    signal ram_q : STD_LOGIC_VECTOR(31 downto 0);
+    signal ram_wren : STD_LOGIC;
+    signal ram_rden : STD_LOGIC;
+    signal is_io_addr : STD_LOGIC;
+    signal outport_reg : STD_LOGIC_VECTOR(31 downto 0);
+    signal inport0_internal : STD_LOGIC_VECTOR(31 downto 0);
+    signal inport1_internal : STD_LOGIC_VECTOR(31 downto 0);
+
+begin
+    -- Convert byte address to word address for RAM
+    ram_addr <= baddr(9 downto 2);
+
+    -- Determine if address is I/O
+    is_io_addr <= '1' when baddr >= x"F0000000" else '0';
+    
+    -- RAM control signals
+    ram_wren <= memWrite and (not is_io_addr);
+    ram_rden <= memRead and (not is_io_addr);
+
+    -- RAM instantiation
+    ram_inst : RAM
+    port map (
+        address => ram_addr,
+        clock => clk,
+        data => dataIn,
+        rden => ram_rden,
+        wren => ram_wren,
+        q => ram_q
+    );
+
+    -- I/O module instantiation
+    io_inst : io_module
+    port map (
+        clk => clk,
+        switches => switches,
+        input_enable => input_enable,
+        display_out => display_out,
+        inport0_out => inport0_internal,
+        inport1_out => inport1_internal,
+        outport_in => outport_reg
+    );
+
+    -- Registered outport
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if memWrite = '1' and baddr = x"F0000FFFC" then
+                outport_reg <= dataIn;
+            end if;
+        end if;
+    end process;
+
+    -- Output multiplexer
+    process(baddr, memRead, ram_q, inport0_internal, inport1_internal)
+    begin
+        if memRead = '1' then
+            case baddr is
+                when x"F0000FFF8" =>  -- INPORT0
+                    dataOut <= inport0_internal;
+                when x"F0000FFFC" =>  -- INPORT1
+                    dataOut <= inport1_internal;
+                when others =>
+                    if is_io_addr = '0' then
+                        dataOut <= ram_q;
+                    else
+                        dataOut <= (others => '0');
+                    end if;
+            end case;
+        else
+            dataOut <= (others => '0');
+        end if;
+    end process;
+
+end Behavioral;

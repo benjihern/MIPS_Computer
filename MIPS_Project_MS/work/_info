@@ -1,0 +1,1021 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/DigitalDesign/Labs/Lab6/Lab6_MS
+Ealu
+Z0 w1733352701
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2383
+Z4 dD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project_MS
+Z5 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu.vhd
+Z6 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu.vhd
+l0
+L5 1
+V4Y0HM5`4HS[YSFUYBSh]G2
+!s100 R5AKXm4Dz[hIIjJJj=ndN3
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1733865527
+!i10b 1
+Z9 !s108 1733865526.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu.vhd|
+Z11 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 4Y0HM5`4HS[YSFUYBSh]G2
+!i122 2383
+l18
+L17 116
+V:GzOa4;S5EmSOlI:PMC^21
+!s100 [0I=i0_k7j:ZKNNjXhBg21
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu_control
+Z14 w1733850555
+R1
+R2
+R3
+!i122 2389
+R4
+Z15 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_control.vhd
+Z16 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_control.vhd
+l0
+L5 1
+VjfZ8k[@kCXMU1Q75DCE691
+!s100 4PiDV8ZEF<T4jOD[K9@`?1
+R7
+32
+Z17 !s110 1733865533
+!i10b 1
+Z18 !s108 1733865533.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_control.vhd|
+Z20 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_control.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 11 alu_control 0 22 jfZ8k[@kCXMU1Q75DCE691
+!i122 2389
+l18
+L17 126
+V3C96dV0eGPnS]TR72cKVP0
+!s100 Y4Sn2jfL5J@F2zQ6If9?g0
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ealu_tb
+Z21 w1731898732
+R1
+R2
+R3
+!i122 2384
+R4
+Z22 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_tb.vhd
+Z23 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_tb.vhd
+l0
+L5 1
+VI6_9AD0nN;3cZI1X2R8hZ0
+!s100 hfB9>?jXe]4Rl[AA37GX_1
+R7
+32
+R8
+!i10b 1
+Z24 !s108 1733865527.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_tb.vhd|
+Z26 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/alu_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 6 alu_tb 0 22 I6_9AD0nN;3cZI1X2R8hZ0
+!i122 2384
+l30
+L8 118
+VASMhlTBP^@D:i1MaooBO`3
+!s100 d]D;GAOConC>zP=^e3JL_0
+R7
+32
+R8
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
+Econcat
+Z27 w1733300373
+R2
+R3
+!i122 2390
+R4
+Z28 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Concat.vhd
+Z29 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Concat.vhd
+l0
+L4 1
+V0FV2N46azOL6k4L]7PzRQ1
+!s100 Agf4LaDXH1m6_hMPTee5X0
+R7
+32
+Z30 !s110 1733865534
+!i10b 1
+R18
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Concat.vhd|
+Z32 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Concat.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 6 concat 0 22 0FV2N46azOL6k4L]7PzRQ1
+!i122 2390
+l13
+L12 4
+VfjP_hQ;G8<C2TjPl8WhHb3
+!s100 GiJNAh23^<M`?Ne?i4RZC3
+R7
+32
+R30
+!i10b 1
+R18
+R31
+R32
+!i113 1
+R12
+R13
+Econtroller
+Z33 w1733864255
+R2
+R3
+!i122 2391
+R4
+Z34 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller.vhd
+Z35 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller.vhd
+l0
+L4 1
+V_S5=@DkDD5Pe1Wn4lG6CH0
+!s100 IT>AVThFA[CeC@d2`e>h>0
+R7
+32
+R30
+!i10b 1
+Z36 !s108 1733865534.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller.vhd|
+Z38 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 10 controller 0 22 _S5=@DkDD5Pe1Wn4lG6CH0
+!i122 2391
+l49
+L28 177
+VczPH02o@bON6IG7gQdUcF2
+!s100 B=_2f=4P3hBOdJ@4kzBPj2
+R7
+32
+R30
+!i10b 1
+R36
+R37
+R38
+!i113 1
+R12
+R13
+Econtroller_tb
+Z39 w1733340490
+R1
+R2
+R3
+!i122 303
+R4
+Z40 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller_tb.vhd
+Z41 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller_tb.vhd
+l0
+L5 1
+VI:5;PI=Sl]jGgFM>R1mT<0
+!s100 UN]GB1SB04G=S]6oBDngA0
+R7
+32
+Z42 !s110 1733341266
+!i10b 1
+Z43 !s108 1733341266.000000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller_tb.vhd|
+Z45 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/controller_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 13 controller_tb 0 22 I:5;PI=Sl]jGgFM>R1mT<0
+!i122 303
+l44
+L8 80
+Vg2=moL=>z9P_F=_VmOBZe1
+!s100 @Odb=@i5ASl70;DEPgnf;3
+R7
+32
+R42
+!i10b 1
+R43
+R44
+R45
+!i113 1
+R12
+R13
+Edatapath
+Z46 w1733846897
+R1
+R2
+R3
+!i122 2392
+R4
+Z47 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath.vhd
+Z48 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath.vhd
+l0
+L5 1
+VH6?mWAK:bWecjW1XWc_L<2
+!s100 dlInOh<IfRnPZf_;HYYzj2
+R7
+32
+R30
+!i10b 1
+R36
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath.vhd|
+Z50 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 8 datapath 0 22 H6?mWAK:bWecjW1XWc_L<2
+!i122 2392
+l295
+L31 486
+VC[U^e4LMWa3_0HFVFR[<03
+!s100 eSV6__M:EGEo8O>UUMieK3
+R7
+32
+R30
+!i10b 1
+R36
+R49
+R50
+!i113 1
+R12
+R13
+Edatapath_tb
+Z51 w1733341663
+R1
+R2
+R3
+!i122 495
+R4
+Z52 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath_tb.vhd
+Z53 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath_tb.vhd
+l0
+L5 1
+VM<VEH6_7eU[?fEB8F^mDT0
+!s100 T[dkzA1R]ZbXQI07B[Cn>1
+R7
+32
+Z54 !s110 1733342652
+!i10b 1
+Z55 !s108 1733342652.000000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath_tb.vhd|
+Z57 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/datapath_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 11 datapath_tb 0 22 M<VEH6_7eU[?fEB8F^mDT0
+!i122 495
+l52
+L8 90
+VF_E7>3;]=biH^z1:oNS^a2
+!s100 D^Qc6dH1obF>0M=n3n13;3
+R7
+32
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R12
+R13
+Eio_module
+Z58 w1733288644
+R1
+R2
+R3
+!i122 2385
+R4
+Z59 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/io_module.vhd
+Z60 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/io_module.vhd
+l0
+L5 1
+V3m8Y5;T26Vn94feg5EmQ11
+!s100 ]>T25EJXf_dJh[XYaeAcK1
+R7
+32
+R8
+!i10b 1
+R24
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/io_module.vhd|
+Z62 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/io_module.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 9 io_module 0 22 3m8Y5;T26Vn94feg5EmQ11
+!i122 2385
+l29
+L22 43
+VmhOmG2oZA]<;;Y5PKJ]?N0
+!s100 7=kNQ3KSP0N[O@b_B_VT=0
+R7
+32
+R8
+!i10b 1
+R24
+R61
+R62
+!i113 1
+R12
+R13
+Ememory_module
+Z63 w1733434501
+R1
+R2
+R3
+!i122 2386
+R4
+Z64 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module.vhd
+Z65 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module.vhd
+l0
+L5 1
+Vn<dXkVT^Oj3EYC[]E@fbe0
+!s100 G122DeeeE`;@i=OPdZoTQ1
+R7
+32
+R8
+!i10b 1
+R24
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module.vhd|
+Z67 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 13 memory_module 0 22 n<dXkVT^Oj3EYC[]E@fbe0
+!i122 2386
+l60
+L23 97
+V3R8h80OnA0J_d0RlzC6z`3
+!s100 V0RmmRa0UAA8_R?0EMn4C2
+R7
+32
+R8
+!i10b 1
+R24
+R66
+R67
+!i113 1
+R12
+R13
+Ememory_module_tb
+Z68 w1733289075
+R1
+R2
+R3
+!i122 2387
+R4
+Z69 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module_tb.vhd
+Z70 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module_tb.vhd
+l0
+L5 1
+VZe4P_5]n;f3>NnboSXWFG3
+!s100 Akmn<dZ9^i]zfaDIDKnmO2
+R7
+32
+Z71 !s110 1733865528
+!i10b 1
+R24
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module_tb.vhd|
+Z73 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/memory_module_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 16 memory_module_tb 0 22 Ze4P_5]n;f3>NnboSXWFG3
+!i122 2387
+l44
+L8 153
+VSd=[jkdREoRL3hU<9=1Zf2
+!s100 8ahEK32M>eCmMmQl@zK5Z1
+R7
+32
+R71
+!i10b 1
+R24
+R72
+R73
+!i113 1
+R12
+R13
+Emux2x1
+Z74 w1733291640
+R2
+R3
+!i122 2393
+R4
+Z75 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1.vhd
+Z76 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1.vhd
+l0
+L4 1
+Vo3<L2J5[=f2RQ>Ii1OT3W3
+!s100 GQ_T;cQcPoiRLjzeP:TfO1
+R7
+32
+R30
+!i10b 1
+R36
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1.vhd|
+Z78 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 6 mux2x1 0 22 o3<L2J5[=f2RQ>Ii1OT3W3
+!i122 2393
+l14
+Z79 L13 11
+VLOS<QSFgVIjKX3IWBjaX41
+!s100 Ae`6DfBRiHaCQ]dM7ek:I0
+R7
+32
+R30
+!i10b 1
+R36
+R77
+R78
+!i113 1
+R12
+R13
+Emux2x1_5
+Z80 w1733302812
+R2
+R3
+!i122 2394
+R4
+Z81 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1_5.vhd
+Z82 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1_5.vhd
+l0
+L4 1
+V^IMjo9Z58?]C87Di?heSS0
+!s100 A3bDTaCedLlW9SGk;Pjz:0
+R7
+32
+Z83 !s110 1733865535
+!i10b 1
+R36
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1_5.vhd|
+Z85 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux2x1_5.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 8 mux2x1_5 0 22 ^IMjo9Z58?]C87Di?heSS0
+!i122 2394
+l14
+R79
+V5NW]Z`_BSM7Rgf0kdNcg=2
+!s100 _mUR3[AH_WdhkjR>SVD9m1
+R7
+32
+R83
+!i10b 1
+R36
+R84
+R85
+!i113 1
+R12
+R13
+Emux3x1
+Z86 w1733292419
+R2
+R3
+!i122 2395
+R4
+Z87 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux3x1.vhd
+Z88 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux3x1.vhd
+l0
+L4 1
+V`XJJV2fA<IbzE23U0bI3U1
+!s100 jIACAYb:?:GE3R]8NL0Z81
+R7
+32
+R83
+!i10b 1
+Z89 !s108 1733865535.000000
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux3x1.vhd|
+Z91 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux3x1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 6 mux3x1 0 22 `XJJV2fA<IbzE23U0bI3U1
+!i122 2395
+l15
+L14 12
+VcUZ0]LhJG:k2N2jQUkELX1
+!s100 B@BNl9dWQ:5RkN5mQZZ4j1
+R7
+32
+R83
+!i10b 1
+R89
+R90
+R91
+!i113 1
+R12
+R13
+Emux4x1
+Z92 w1733292515
+R2
+R3
+!i122 2396
+R4
+Z93 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux4x1.vhd
+Z94 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux4x1.vhd
+l0
+L4 1
+V4AcIKVdHi[ND3QFVebG9O2
+!s100 G5Jn]=dE@g@>AHGAI?L4>0
+R7
+32
+R83
+!i10b 1
+R89
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux4x1.vhd|
+Z96 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/mux4x1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 6 mux4x1 0 22 4AcIKVdHi[ND3QFVebG9O2
+!i122 2396
+l16
+L15 13
+V`DLn`z]@mi`T^@E`BQM[42
+!s100 Lo7b4AMG`34ISZ=VD6fGI2
+R7
+32
+R83
+!i10b 1
+R89
+R95
+R96
+!i113 1
+R12
+R13
+Eram
+Z97 w1733865501
+Z98 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R2
+R3
+!i122 2388
+R4
+Z99 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/RAM.vhd
+Z100 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/RAM.vhd
+l0
+L43 1
+VOd8eO=0oXzW=6TjOUAfMI1
+!s100 nU?gh;DOVYMF8Fz_olcz40
+R7
+32
+R71
+!i10b 1
+Z101 !s108 1733865528.000000
+Z102 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/RAM.vhd|
+Z103 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/RAM.vhd|
+!i113 1
+R12
+R13
+Asyn
+R98
+R2
+R3
+DEx4 work 3 ram 0 22 Od8eO=0oXzW=6TjOUAfMI1
+!i122 2388
+l59
+L55 36
+V_AzCE_L7GS8JNZda;neWX2
+!s100 N;Za]YzGOMO0GhMK<PXK01
+R7
+32
+R71
+!i10b 1
+R101
+R102
+R103
+!i113 1
+R12
+R13
+Ereg32
+Z104 w1733290991
+R1
+R2
+R3
+!i122 2397
+R4
+Z105 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/reg32.vhd
+Z106 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/reg32.vhd
+l0
+L5 1
+V3]8mHIKIJ:McT9gRYj=Vb3
+!s100 `<]PC<XjQB3G<0:0IA4IK3
+R7
+32
+Z107 !s110 1733865536
+!i10b 1
+R89
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/reg32.vhd|
+Z109 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/reg32.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 5 reg32 0 22 3]8mHIKIJ:McT9gRYj=Vb3
+!i122 2397
+l20
+L18 17
+V=Fe?nU8X7OT>KBlKEW4013
+!s100 OJ_1RAV2B[FMLAc_HEX2n1
+R7
+32
+R107
+!i10b 1
+R89
+R108
+R109
+!i113 1
+R12
+R13
+Eregisterfile
+Z110 w1733302213
+R1
+R2
+R3
+!i122 2398
+R4
+Z111 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/registerfile.vhd
+Z112 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/registerfile.vhd
+l0
+L5 1
+VK=4VaPz;ASgJaM9mDZ]h^1
+!s100 ii1k2IePg1F[]fJaf66k<2
+R7
+32
+R107
+!i10b 1
+Z113 !s108 1733865536.000000
+Z114 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/registerfile.vhd|
+Z115 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/registerfile.vhd|
+!i113 1
+R12
+R13
+Async_read
+R1
+R2
+R3
+DEx4 work 12 registerfile 0 22 K=4VaPz;ASgJaM9mDZ]h^1
+!i122 2398
+l28
+L24 25
+VV=emPdkY:3668AJz876`:3
+!s100 X9BDPRd:9jlmFkBE4jc@>3
+R7
+32
+R107
+!i10b 1
+R113
+R114
+R115
+!i113 1
+R12
+R13
+Eshiftleft2
+Z116 w1733294661
+R2
+R3
+!i122 2399
+R4
+Z117 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2.vhd
+Z118 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2.vhd
+l0
+L4 1
+VC`cFPD69[f9B:5[I3c^:Q2
+!s100 a5c4iMZPbe1E@A]fLLg`k2
+R7
+32
+R107
+!i10b 1
+R113
+Z119 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2.vhd|
+Z120 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 10 shiftleft2 0 22 C`cFPD69[f9B:5[I3c^:Q2
+!i122 2399
+l12
+Z121 L11 4
+VL2kUDm>GYDWLJ9@hR@S]V2
+!s100 >=d3kR:4[@3f@cQQ0OKc73
+R7
+32
+R107
+!i10b 1
+R113
+R119
+R120
+!i113 1
+R12
+R13
+Eshiftleft2_26
+Z122 w1733303024
+R2
+R3
+!i122 2400
+R4
+Z123 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2_26.vhd
+Z124 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2_26.vhd
+l0
+L4 1
+VzmcG8]NYCZV<<AMgmKlnM1
+!s100 e:aWzbQ3`@ljRJPW8Y@h71
+R7
+32
+R107
+!i10b 1
+R113
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2_26.vhd|
+Z126 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ShiftLeft2_26.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 13 shiftleft2_26 0 22 zmcG8]NYCZV<<AMgmKlnM1
+!i122 2400
+l12
+R121
+VC3]>5J8doXK`HU0UThN^I2
+!s100 iXODfR_lUoZk?5kRh0C6h0
+R7
+32
+R107
+!i10b 1
+R113
+R125
+R126
+!i113 1
+R12
+R13
+Esignextend
+Z127 w1733294324
+R2
+R3
+!i122 2401
+R4
+Z128 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/SignExtend.vhd
+Z129 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/SignExtend.vhd
+l0
+L4 1
+VHbcz_6Ud`GHDS=TOOKS6;2
+!s100 DI5NXBBMgl[;ezUFGeCmC3
+R7
+32
+R107
+!i10b 1
+R113
+Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/SignExtend.vhd|
+Z131 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/SignExtend.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 10 signextend 0 22 Hbcz_6Ud`GHDS=TOOKS6;2
+!i122 2401
+l13
+L12 17
+VY_>f@i;fm`alW]ongeS]>1
+!s100 M9Z6i=fQIZzm:9mRa<2=V3
+R7
+32
+R107
+!i10b 1
+R113
+R130
+R131
+!i113 1
+R12
+R13
+Etop_level
+Z132 w1733348966
+R2
+R3
+!i122 2402
+R4
+Z133 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level.vhd
+Z134 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level.vhd
+l0
+L4 1
+VOa]MmK9T@R7QH9=^6ibTU1
+!s100 Xb>X=1MO[c9:GIoK_o0cF0
+R7
+32
+Z135 !s110 1733865537
+!i10b 1
+Z136 !s108 1733865537.000000
+Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level.vhd|
+Z138 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 9 top_level 0 22 Oa]MmK9T@R7QH9=^6ibTU1
+!i122 2402
+l87
+L13 126
+V6eLZUV<`Y>]8W2<NWonFN1
+!s100 06zS6eX]nW4jzhbXZnN5^3
+R7
+32
+R135
+!i10b 1
+R136
+R137
+R138
+!i113 1
+R12
+R13
+Etop_level_tb
+Z139 w1733432775
+R1
+R2
+R3
+!i122 2404
+R4
+Z140 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level_TB.vhd
+Z141 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level_TB.vhd
+l0
+L5 1
+V;]6ide>RSMBaYY@EIg7j52
+!s100 15OZXTCEz16ELaeWG8@=m3
+R7
+32
+R135
+!i10b 1
+R136
+Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level_TB.vhd|
+Z143 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/Top_Level_TB.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z144 DEx4 work 12 top_level_tb 0 22 ;]6ide>RSMBaYY@EIg7j52
+!i122 2404
+l25
+Z145 L8 47
+Z146 VW^KkZKm>cSn3l5a8=Sai[2
+Z147 !s100 f4dN;SEMo5[Mg41fg``i:0
+R7
+32
+R135
+!i10b 1
+R136
+R142
+R143
+!i113 1
+R12
+R13
+Ezeroextend
+Z148 w1733303268
+R2
+R3
+!i122 2403
+R4
+Z149 8D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ZeroExtend.vhd
+Z150 FD:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ZeroExtend.vhd
+l0
+L4 1
+V9SNTW>]L8_h0e_Lg_DCQQ1
+!s100 X7fca_5k;NEX<n>?TeOnd0
+R7
+32
+R135
+!i10b 1
+R136
+Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ZeroExtend.vhd|
+Z152 !s107 D:/DigitalDesign/Labs/MIPS_Project/MIPS_Project/ZeroExtend.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 10 zeroextend 0 22 9SNTW>]L8_h0e_Lg_DCQQ1
+!i122 2403
+l12
+L11 5
+Vm8[LF69K_DSZ`gnZPh@JA1
+!s100 :e:znDPS=15;bQ`cX^K9K2
+R7
+32
+R135
+!i10b 1
+R136
+R151
+R152
+!i113 1
+R12
+R13
