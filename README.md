@@ -32,4 +32,22 @@ The design emphasizes modularity, extensibility, and simulation validation throu
 - Intel Quartus Prime for synthesis and simulation
 - ModelSim for functional simulation and waveform analysis
 
-  
+## Simulation Results
+
+### Datapath RTL Diagram
+![datapath](https://github.com/user-attachments/assets/021df629-747b-455b-b105-b564abfb603a)
+
+### Waveform Validation (No Branch or Jump)
+![d4_wave](https://github.com/user-attachments/assets/8b6681e5-7f59-4042-b397-a641baaa1e89)
+
+### Register File Values After Execution (No Branch or Jump)
+![d4_reg](https://github.com/user-attachments/assets/f837559a-3092-4b40-a817-3535aed81cd9)
+
+### Memory Module Values After Execution (No Branch or Jump)
+![d4_mem](https://github.com/user-attachments/assets/d589f2b6-cb06-4189-8286-4eee037adf37)
+
+### Waveform Validation (Full System)
+![d5_waveform](https://github.com/user-attachments/assets/24e34ed8-78ee-40b5-bede-ba1ade24967a)
+
+### RAM Values After Execution (Full System)
+![d5_memory](https://github.com/user-attachments/assets/78f0a52b-a9e4-481f-8819-ec55a882fa05)
