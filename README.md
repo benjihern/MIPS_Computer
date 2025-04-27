@@ -15,14 +15,21 @@ The design emphasizes modularity, extensibility, and simulation validation throu
 - Verified functionality through simulation waveforms and memory dumps
 
 ## Project Architecture
-# - Datapath Components
+- ** Datapath Components
   - ALU (Arithmetic Logic Unit) with signed/unsigned multiply, shifting, branching
   - 32x32 Register File with dual read and single write ports
   - Memory module with 256x32 RAM and mapped I/O ports
   - Instruction Register (IR) and Program Counter (PC)
   - Auxiliary registers: HI, LO, ALUOut, RegA, RegB
 
-# - Control Unit
+- ** Control Unit
   - Finite state machine (FSM) controller
   - Handles instruction fetch, decode, execute, memory access, and write-back cycles
   - Supports PCWrite, MemRead, MemWrite, ALUSrc, RegWrite, and branching controls
+    
+## Development Tools
+- VHDL for hardware description
+- Intel Quartus Prime for synthesis and simulation
+- ModelSim for functional simulation and waveform analysis
+
+  
